@@ -1,6 +1,6 @@
 using System.Windows.Controls;
 
-namespace Xrite.Wpf.Test.Views;
+namespace TryMaraudersProject.Views;
 
 public partial class SettingsView : UserControl
 {

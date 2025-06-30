@@ -1,4 +1,4 @@
-namespace Xrite.Wpf.Test.Views.Home;
+namespace TryMaraudersProject.Views.Home;
 
 public partial class NestedSecondView
 {

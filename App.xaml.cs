@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using TryMaraudersProject.ViewModels;
 using TryMaraudersProject.ViewModels.Home;
-using Xrite.Wpf.Test.Views;
-using Xrite.Wpf.Test.Views.Home;
+using TryMaraudersProject.Views;
+using TryMaraudersProject.Views.Home;
 using HomeViewModel = TryMaraudersProject.ViewModels.Home.HomeViewModel;
 
 namespace TryMaraudersProject;

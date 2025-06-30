@@ -1,9 +1,9 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace TryMaraudersProject.ViewModels.Home;
+namespace TryMaraudersProject.ViewModels;
 
-public class NestedSecondViewModel:ObservableRecipient
+public class SettingsViewModel:ObservableRecipient
 {
-    public string Title => "Welcome to Second Nested View!";
+    public string Title => "Welcome to Settings View";
 
 }
