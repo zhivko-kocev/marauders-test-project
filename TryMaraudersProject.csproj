@@ -8,8 +8,8 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Kocew.WPF.MaraudersMap\Kocew.WPF.MaraudersMap.csproj" />
+     <ItemGroup>
+      <PackageReference Include="kocew.marauders-map" Version="2.0.0" />
     </ItemGroup>
 
 </Project>
