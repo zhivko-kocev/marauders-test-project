@@ -1,0 +1,32 @@
+<UserControl x:Class="Xrite.Wpf.Test.Views.Home.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:maraudersServices="clr-namespace:Kocew.WPF.MaraudersMap.MaraudersServices;assembly=Kocew.WPF.MaraudersMap"
+             xmlns:home="clr-namespace:TryMaraudersProject.ViewModels.Home"
+             xmlns:root="clr-namespace:TryMaraudersProject.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <StackPanel>
+            <TextBlock Text="{Binding Title}" FontSize="20" Margin="10" />
+            
+            <Button Content="Settings" maraudersServices:NavigationWaypoint.ViewModel="{x:Type root:SettingsViewModel}"
+                    maraudersServices:NavigationWaypoint.Region="MainContent" />
+            
+            <Button Content="FirstNested" maraudersServices:NavigationWaypoint.Region="InnerContent"
+                    maraudersServices:NavigationWaypoint.ViewModel="{x:Type home:NestedFirstViewModel}" />
+            
+            <Button Content="SecondNested" maraudersServices:NavigationWaypoint.Region="InnerContent"
+                    maraudersServices:NavigationWaypoint.ViewModel="{x:Type home:NestedSecondViewModel}" />
+        </StackPanel>
+        
+        <ContentControl maraudersServices:NavigationRegion.RegionName="InnerContent" Grid.Row="1" />
+    </Grid>
+</UserControl>
