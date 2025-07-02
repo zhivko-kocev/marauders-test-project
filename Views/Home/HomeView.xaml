@@ -17,8 +17,8 @@
         <StackPanel>
             <TextBlock Text="{Binding Title}" FontSize="20" Margin="10" />
             
-            <Button Content="Settings" maraudersServices:NavigationWaypoint.ViewModel="{x:Type root:SettingsViewModel}"
-                    maraudersServices:NavigationWaypoint.Region="MainContent" />
+            <Button Content="Settings" maraudersServices:NavigationWaypoint.Region="MainContent"
+                    maraudersServices:NavigationWaypoint.ViewModel="{x:Type root:SettingsViewModel}"/>
             
             <Button Content="FirstNested" maraudersServices:NavigationWaypoint.Region="InnerContent"
                     maraudersServices:NavigationWaypoint.ViewModel="{x:Type home:NestedFirstViewModel}" />

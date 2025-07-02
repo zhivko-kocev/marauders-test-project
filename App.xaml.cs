@@ -1,4 +1,4 @@
-﻿using Kocew.WPF.MaraudersMap.MaraudersServices;
+﻿using Kocew.WPF.MaraudersMap.MaraudersUtils;
 using Microsoft.Extensions.DependencyInjection;
 using TryMaraudersProject.ViewModels;
 using TryMaraudersProject.ViewModels.Home;
@@ -13,7 +13,7 @@ namespace TryMaraudersProject;
 /// </summary>
 public partial class App
 {
-    public static IServiceProvider Services { get; private set; } = null!;
+    public static IServiceProvider Services { get; set; } = null!;
 
     public App()
     {
@@ -23,19 +23,18 @@ public partial class App
         services.AddSingleton<SettingsViewModel>();
         services.AddSingleton<NestedFirstViewModel>();
         services.AddSingleton<NestedSecondViewModel>();
-
-
+        
         services.AddSingleton<HomeView>();
         services.AddSingleton<SettingsView>();
         services.AddSingleton<NestedFirstView>();
         services.AddSingleton<NestedSecondView>();
-        
+
         services.AddSingleton<MainWindow>();
-
-
-        Services = services.BuildServiceProvider();
-        NavigationProvider.Services = Services;
         
+        services.AddMaraudersMap();
+        
+        Services = services.BuildMaraudersMap();
+
         Services.GetRequiredService<MainWindow>().Show();
     }
 }
